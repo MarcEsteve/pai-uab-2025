@@ -2,7 +2,7 @@
 
 **Universitat Autònoma de Barcelona (UAB)**  
 📆 Curs 2025  
-👨‍🏫 Professor: [Nom del professor, opcional]  
+👨‍🏫 Professor: Marc Esteve Garcia 
 
 ---
 
