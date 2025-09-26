@@ -1,5 +1,5 @@
 h1 {
-    font-family:charlemagne, sans-serif;
+    font-family: 'Arial', sans-serif;
 }
 
 #logo-pixar {
@@ -10,6 +10,24 @@ h1 {
     margin-bottom: 20px;
     /* Espai superior */
     padding-top: 20px;
+}
+
+#bg-space {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+    opacity: 0.3; /* Ajusta l'opacitat segons sigui necessari */
+}
+
+
+
+nav {
+    padding: 10px 0;
+    margin-bottom: 20px;
+    font-variant-caps: all-small-caps;
 }
 
 li {
