@@ -1,0 +1,26 @@
+#idH1 {
+  color: rgb(139, 23, 0);
+  font-family: "Arial", sans-serif;
+  text-align: center;
+  font-size: 50px;
+}
+#idP {
+  color: rgb(119, 205, 70);
+  font-size: 20px;
+  font-weight: 900;
+}
+#idP2 {
+  color: rgb(205, 70, 198);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+h1,
+h2,
+h3, .class1 {
+  font-family: 'Times New Roman', Times, serif;
+}
+
+* {
+  box-sizing: border-box;
+}
