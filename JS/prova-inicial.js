@@ -9,4 +9,4 @@ alert("Has introduït: " + edat + " anys");
 console.log("L’usuari ha introduït l’edat: " + edat);
 
 // Escrivim directament a la pàgina HTML
-document.write("<p>La teva edat és: " + edat + "</p>");
+document.getElementById("resultat").innerHTML = "<p>La teva edat és: " + edat + "</p>";
