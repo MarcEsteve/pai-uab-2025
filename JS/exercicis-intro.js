@@ -1,8 +1,9 @@
 // 2.1.- Què passaria si féssim aquestes declaracions de variables? Pensa primer que creus que passaria. Després pots provar a executar aquestes instruccions i veure que passa (si passa alguna cosa). 
 
-// var a = 1; // a és igual a 1
-// var a = 2; // a és igual a 2
-// console.log(a); 
+var a = 1; // a és igual a 1
+//1000 linies de codi 
+var a = 2; // a és igual a 2
+console.log(a); 
 
 // var b = 1;
 // //1000 linies de codi 
