@@ -3,7 +3,9 @@
 // let numero = parseInt(prompt("Introdueix un número:"));
 // if (numero < 0) {
 //     console.log("El número llegit és negatiu");
+//     document.getElementById("mostra").innerText = "El número llegit és negatiu";
 // }
+// console.log("Acaba el codi");
 
 // 13.2.- Escriu un programa que donat un número llegit amb prompt, escrigui el missatge “el número llegit és parell” si el número es parell. 
 
