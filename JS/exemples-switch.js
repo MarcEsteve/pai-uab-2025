@@ -1,6 +1,7 @@
     // let diaSetmana = new Date().toLocaleDateString('ca-ES', { weekday: 'long' });
 
-    let diaSetmana = "diMecres";
+    let diaSetmana = "Dijous";
+
     diaSetmana = diaSetmana.toLowerCase();
     switch (diaSetmana) {
         case "dilluns":
@@ -28,4 +29,46 @@
             console.log("No es un dia de la setmana vàlid.");
     }
 
-    
+    // let  mesAny = "Octubre";
+    let  mesAny = new Date().toLocaleDateString('ca-ES', { month: 'long' });
+
+    switch (mesAny) {
+        case "gener":
+            console.log("Aquest mes és gener.");
+            break;
+        case "febrer":
+            console.log("Avui és febrer.");
+            break;
+        case "març":
+            console.log("Avui és març.");
+            break;
+        case "abril":
+            console.log("Avui és abril.");
+            break;
+        case "maig":
+            console.log("Avui és maig.");
+            break;
+        case "juny":
+            console.log("Avui és juny.");
+            break;
+        case "juliol":
+            console.log("Avui és juliol.");
+            break;
+        case "agost":
+            console.log("Avui és agost.");
+            break;
+        case "setembre":
+            console.log("Avui és setembre.");
+            break;
+        case "octubre":
+            console.log("Avui és octubre.");
+            break;
+        case "novembre":
+            console.log("Avui és novembre.");
+            break;
+        case "desembre":
+            console.log("Avui és desembre.");
+            break;
+        default:
+            console.log("No es un mes de l'any vàlid.");
+    }
