@@ -1,5 +1,4 @@
 // Exercici 1 repeteix "Estem fent bucles 10 vegades"
-
 // for
 for (let i = 0; i < 10; i++) {
     console.log("Estem fent bucles for");
