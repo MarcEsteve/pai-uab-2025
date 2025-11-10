@@ -42,3 +42,7 @@ switch (mes) {
     console.log("No és cap mes de l'any");
     break;
 }
+
+// if (mes < 1 || mes > 12) {
+//   console.log("No és cap mes de l'any");
+// }

@@ -1,6 +1,12 @@
 // 1.- (2 punts) Escriu un programa amb JavaScript que, donat un número llegit amb prompt (recorda fer la conversió), escrigui el missatge a consola "El número és superior a 3" si el número és més gran que tres, "El número és inferior a 3" si és més petit que tres i "El número és tres" si és igual a tres.
 
+// isNaN() s'ha d'utilitzar en bucles per comprovar si un valor és un número vàlid o no.
+
 let numero = parseInt(prompt("Introdueix un numero:"));
+// let numero = Number(prompt("Introdueix un numero:"));
+// let numero = prompt("Introdueix un numero:");
+// let N = parseInt(numero);
+// let numeroPositiu = Number(numero);
 
 // if (numero > 3) {
 //   console.log("El numero es major que 3");
