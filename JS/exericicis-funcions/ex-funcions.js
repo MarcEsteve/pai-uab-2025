@@ -1,7 +1,7 @@
 // 3.1 Escriu un script que contingui una funció a la qual se li passa com a paràmetre un nombre enter i retorna com a resultat una cadena de text que indica si el número és parell o imparell. Mostra per pantalla el resultat retornat per la funció.
 
 
-function parellSenar(numero) {
+function parellImparell(numero) {
     if (numero % 2 === 0) {
         return "El número " + numero + " és parell.";
     } else {
@@ -10,6 +10,6 @@ function parellSenar(numero) {
 }
 
 let numeroEntrada = parseInt(prompt("Introdueix un nombre enter:"));
-let resultat = parellSenar(numeroEntrada);
+let resultat = parellImparell(numeroEntrada);
 console.log(resultat);
-document.getElementById("resultado31").innerText = resultat;
+// document.getElementById("resultado31").innerText = resultat;
