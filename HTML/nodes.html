@@ -17,6 +17,16 @@
         <li>Sensor 2: CO₂ — 540 ppm</li>
     </ul>
 
+    <form action="" method="get">
+        <label for="tipusSensor">Tipus de sensor:</label>
+        <input type="text" id="tipusSensor" name="tipusSensor" placeholder="Ex: PM10" required>
+        <label for="valorSensor">Valor del sensor:</label>
+        <input type="number" id="valorSensor" name="valorSensor" placeholder="Ex: 20" required>
+        <label for="magnitud">Magnitud:</label>
+        <input type="text" id="magnitud" name="magnitud" placeholder="Ex: µg/m³" required>
+        <button type="button" onclick="afegirSensorPersonalitzat()">Afegir sensor personalitzat</button>
+    </form>
+
     <script src="../JS/nodes.js"></script>
 </body>
 </html>

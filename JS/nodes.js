@@ -39,3 +39,16 @@ function eliminarUltimSensor() {
     llista.removeChild(ultim);
   }
 }
+
+function afegirSensorPersonalitzat() {
+  let llista = document.getElementById("llistaSensors");
+  let tipus = document.getElementById("tipusSensor").value;
+  let valor = document.getElementById("valorSensor").value;
+  let magnitud = document.getElementById("magnitud").value;
+
+  let nouSensor = document.createElement("li");
+  let text = document.createTextNode(`Sensor personalitzat: ${tipus} — ${valor} ${magnitud}`);
+
+  nouSensor.appendChild(text);
+  llista.appendChild(nouSensor);
+}
