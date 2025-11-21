@@ -1,0 +1,54 @@
+/* Estil per atributs-dom.html */
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: #e8f0fe;
+}
+h1 {
+  color: #1a73e8;
+}
+button {
+  background-color: #1a73e8;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+button:hover {
+  background-color: #155ab6;
+}
+img {
+  display: block;
+  margin-top: 20px;
+  max-width: 100%;
+  height: auto;
+}
+#sensorData {
+  margin-top: 20px;
+  font-size: 1.2em;
+  color: #333;
+}
+#sensorData.high {
+  color: red;
+}
+#sensorData.medium {
+  color: orange;
+}
+#sensorData.low {
+  color: green;
+}
+#sensorData.unknown {
+  color: gray;
+}
+
+.sensor-ok {
+  color: green;
+}
+.sensor-alerta {
+  color: orange;
+}
+.sensor-perill {
+  color: red;
+}

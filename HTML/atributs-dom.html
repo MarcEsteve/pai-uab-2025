@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    <meta charset="UTF-8" />
+    <title>PAI – Modificació d'Atributs DOM</title>
+    <link rel="stylesheet" href="atributs-dom.css">
+  </head>
+  <body>
+    <h1>Modificació d'atributs del DOM</h1>
+
+    <a id="enllacDades" href="https://uab.cat">Portal original</a>
+    <br /><br />
+
+    <p id="sensor" class="sensor-ok" data-id="A23">Sensor PM2.5 - 12 µg/m³</p>
+
+    <img id="imatgeMapa" src="../IMG/ciutat1.jpg" alt="Mapa inicial" width="200" />
+
+    <br /><br />
+    <button onclick="modificarHref()">Canviar l'enllaç</button>
+    <button onclick="canviarClasse()">Canviar classe del sensor</button>
+    <button onclick="canviarEstil()">Canviar estil del sensor</button>
+    <button onclick="canviarImatge()">Canviar imatge</button>
+    <button onclick="canviarDataset()">Modificar dades del sensor</button>
+
+    <script src="../JS/atributs-dom.js"></script>
+  </body>
+</html>
