@@ -12,12 +12,13 @@
     <button onclick="afegirSensor()">Afegir sensor</button>
     <button onclick="afegirSensorPrioritari()">Afegir sensor prioritari</button>
     <button onclick="eliminarUltimSensor()">Eliminar últim sensor</button>
+    <button onclick="eliminarPrimerSensor()">Eliminar primer sensor</button>
 
     <ul id="llistaSensors">
         <li>Sensor 1: PM2.5 — 12 µg/m³</li>
         <li>Sensor 2: CO₂ — 540 ppm</li>
     </ul>
-    <h2>Afegir sensor personalitzat</h2>
+    <h2 style="text-align: center;">Afegir sensor personalitzat</h2>
     <form action="" method="get">
         <label for="tipusSensor">Tipus de sensor:</label>
         <input type="text" id="tipusSensor" name="tipusSensor" placeholder="Ex: PM10" required>
@@ -25,6 +26,14 @@
         <input type="number" id="valorSensor" name="valorSensor" placeholder="Ex: 20" required>
         <label for="magnitud">Magnitud:</label>
         <input type="text" id="magnitud" name="magnitud" placeholder="Ex: µg/m³" required>
+        <label for="prioritat">Prioritat:</label>
+        <select name="prioritat" id="prioritat">
+            <option value="urgent">Urgent (El primer de la llista)</option>
+            <option value="normal">Normal (A continuació de la llista)</option>
+        </select>
+        <br>
+        <br>
+        <br>
         <button type="button" onclick="afegirSensorPersonalitzat()">Afegir sensor personalitzat</button>
     </form>
 

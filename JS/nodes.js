@@ -40,15 +40,31 @@ function eliminarUltimSensor() {
   }
 }
 
+// Funció per eliminar el primer sensor (removeChild)
+function eliminarPrimerSensor() {
+  let llista = document.getElementById("llistaSensors");
+  let primer = llista.firstElementChild;
+
+  if (primer) {
+    llista.removeChild(primer);
+  }
+}
+
 function afegirSensorPersonalitzat() {
   let llista = document.getElementById("llistaSensors");
   let tipus = document.getElementById("tipusSensor").value;
   let valor = document.getElementById("valorSensor").value;
   let magnitud = document.getElementById("magnitud").value;
-
-  let nouSensor = document.createElement("li");
+  let prioritat = document.getElementById("prioritat").value;
+  let nouSensorCustom = document.createElement("li");
   let text = document.createTextNode(`Sensor personalitzat: ${tipus} — ${valor} ${magnitud}`);
 
-  nouSensor.appendChild(text);
-  llista.appendChild(nouSensor);
+  nouSensorCustom.appendChild(text);
+  if (prioritat === "urgent") {
+    let primer = llista.firstElementChild;
+    llista.insertBefore(nouSensorCustom, primer);
+  } else {
+    llista.appendChild(nouSensorCustom);
+  }
 }
+
