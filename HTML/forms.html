@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulari d'inscripció PAI — Exemple</title>
+    <link rel="stylesheet" href="../CSS/forms.css">
+  </head>
+  <body>
+    <h1>Formulari d'inscripció PAI — Exemple de camps</h1>
+
+    <form
+      id="paiForm"
+      action="#"
+      method="post"
+      enctype="multipart/form-data"
+      novalidate
+    >
+      <fieldset>
+        <legend>Dades personals</legend>
+        <div class="row">
+          <div class="col">
+            <label for="fullName"
+              >Nom complet <span class="small">(requerit)</span></label
+            >
+            <input
+              id="fullName"
+              name="fullName"
+              type="text"
+              required
+              minlength="3"
+              maxlength="80"
+              placeholder="Ex: Jana Martínez i Puig"
+            />
+          </div>
+          <div class="col">
+            <label for="preferredName"
+              >Nom preferit <span class="small">(opcional)</span></label
+            >
+            <input
+              id="preferredName"
+              name="preferredName"
+              type="text"
+              placeholder="Ex: Jana"
+            />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <label for="email"
+              >Correu electrònic <span class="small">(requerit)</span></label
+            >
+            <input
+              id="email"
+              name="email"
+              type="email"
+              required
+              placeholder="exemple@domini.cat"
+            />
+          </div>
+          <div class="col">
+            <label for="phone"
+              >Telèfon <span class="small">(recomanat)</span></label
+            >
+            <input
+              id="phone"
+              name="phone"
+              type="tel"
+              pattern="^[0-9\-\s\+]{7,20}$"
+              placeholder="+34 612 345 678"
+            />
+            <div class="hint">
+              Format acceptat: números, espais, guions i +- (7–20 caràcters)
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <label for="birthdate"
+              >Data de naixement <span class="small">(requerit)</span></label
+            >
+            <input id="birthdate" name="birthdate" type="date" required />
+            <div id="ageHint" class="hint">edat: —</div>
+          </div>
+          <div class="col">
+            <label for="idNumber"
+              >DNI/NIE/Passaport <span class="small">(opcional)</span></label
+            >
+            <input
+              id="idNumber"
+              name="idNumber"
+              type="text"
+              pattern="^[A-Za-z0-9\-]{4,20}$"
+              placeholder="Ex: 12345678A"
+            />
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Informació acadèmica i disponibilitat</legend>
+        <label for="course">Curs/Any</label>
+        <select id="course" name="course">
+          <option value="">(Selecciona)</option>
+          <option>1r ESO</option>
+          <option>2n ESO</option>
+          <option>3r ESO</option>
+          <option>4t ESO</option>
+          <option>1r Batxillerat</option>
+          <option>2n Batxillerat</option>
+        </select>
+
+        <label>Assignatures d'interès</label>
+        <div class="small">
+          <label
+            ><input type="checkbox" name="subjects" value="matematicas" />
+            Matemàtiques</label
+          >
+          <label
+            ><input type="checkbox" name="subjects" value="ciencies" />
+            Ciències</label
+          >
+          <label
+            ><input type="checkbox" name="subjects" value="llengua" /> Llengua i
+            Literatura</label
+          >
+          <label
+            ><input type="checkbox" name="subjects" value="arts" /> Arts</label
+          >
+          <label
+            ><input type="checkbox" name="subjects" value="tecnologia" />
+            Tecnologia</label
+          >
+        </div>
+
+        <label>Modalitat preferida</label>
+        <div class="small">
+          <label
+            ><input type="radio" name="mode" value="presencial" checked />
+            Presencial</label
+          >
+          <label
+            ><input type="radio" name="mode" value="hibrid" /> Híbrid</label
+          >
+          <label
+            ><input type="radio" name="mode" value="online" /> En línia</label
+          >
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <label for="hoursPerWeek">Hores disponibles/setmana</label>
+            <input
+              id="hoursPerWeek"
+              name="hoursPerWeek"
+              type="number"
+              min="0"
+              max="40"
+              step="1"
+              value="3"
+            />
+          </div>
+          <div class="col">
+            <label for="startTime">Horari preferit per començar (hora)</label>
+            <input id="startTime" name="startTime" type="time" />
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Materials i enllaços</legend>
+        <label for="portfolio">Enllaç al portfolio / perfil (opcional)</label>
+        <input
+          id="portfolio"
+          name="portfolio"
+          type="url"
+          placeholder="https://"
+        />
+
+        <label for="documents"
+          >Documentació (PDF o imatge)
+          <span class="small">(requerit)</span></label
+        >
+        <input
+          id="documents"
+          name="documents"
+          type="file"
+          accept="application/pdf,image/*,.doc,.docx"
+          required
+        />
+        <div id="fileName" class="hint">Cap fitxer seleccionat</div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Altres</legend>
+        <label for="favoriteColor">Color preferit</label>
+        <input
+          id="favoriteColor"
+          name="favoriteColor"
+          type="color"
+          value="#2b8cff"
+        />
+
+        <label for="experience"
+          >Nivell (0 cap experiència — 10 molt experimentat)</label
+        >
+        <input
+          id="experience"
+          name="experience"
+          type="range"
+          min="0"
+          max="10"
+          value="3"
+        />
+
+        <label for="city">Població</label>
+        <input
+          id="city"
+          name="city"
+          list="cities"
+          placeholder="Torrelles, Barcelona, ..."
+        />
+        <datalist id="cities">
+          <option value="Barcelona"></option>
+          <option value="Lleida"></option>
+          <option value="Girona"></option>
+          <option value="Tarragona"></option>
+        </datalist>
+
+        <label for="notes">Comentaris i observacions</label>
+        <textarea
+          id="notes"
+          name="notes"
+          rows="5"
+          maxlength="800"
+          placeholder="Escriu aquí informació rellevant..."
+        ></textarea>
+        <div id="charCount" class="hint">0 / 800 caràcters</div>
+      </fieldset>
+
+      <input type="hidden" name="formType" value="pai-example" />
+
+      <div class="actions">
+        <button type="submit">Enviar inscripció</button>
+        <button type="reset">Restablir</button>
+      </div>
+    </form>
+    <script src="../JS/forms.js"></script>
+  </body>
+</html>
