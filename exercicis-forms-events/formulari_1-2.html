@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Exercicis formularis | exercicis 6.1 i 6.2</title>
+	<link href="formulari_1-2.css" rel="stylesheet" type="text/css"> 
+	<script type="text/javascript" src="formulari_1-2.js"></script>
+</head>
+<body onload="inici()">
+<form name="formulari_i">
+	First name:<br>
+	<input type="text" name="firstname" value="Mickey">
+	<br>
+	Last name:<br>
+	<input type="text" name="lastname" value="Mouse">
+	<br><br>
+	<input type="submit" value="Submit">
+</form> 
+<form name="formulari_ii">
+  <input type="radio" name="quest" value="Sí" id ="preg_si" checked > Sí<br> 
+  <input type="radio" name="quest" value="No" id = "preg_no" > No<br>
+  <input type="radio" name="quest" value="NSNC" id = "preg_nsnc" > NS/NC   
+</form>
+<form name="formulari_iii">
+   <input type="checkbox" name= "yes" value="Sí" checked>Sí <br>
+   <input type="checkbox" name= "no" value="No">No <br>
+   <input type="checkbox" name= "indef" value="NS/NC">NS/NC 
+</form>
+<form name="formulari_iv">
+ <select id = "opcions" name = "opcions"> 
+   <option value="Sí">Sí</option>
+   <option value="No">No</option>
+   <option value="NS/NC">NS/NC</option>
+ </select>
+</form>
+<div>
+	<h1>Accedint als diferents elements</h1>
+	<p id="resultats"></p>
+</body>
+</html>
