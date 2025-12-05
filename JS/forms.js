@@ -1,4 +1,4 @@
-// Exemples d'accés al formulari i elements (similars als que vas mostrar)
+// Exemples d'accés al formulari i elements HTML i manipulació bàsica
 // Access via collections
 console.log(document.forms); // HTMLCollection de formularis
 console.log(document.forms[0]); // primer formulari de la pàgina
