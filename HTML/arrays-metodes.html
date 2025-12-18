@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <title>PAI – Mètodes d’Arrays en JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+        }
+        button {
+            margin: 3px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>PAI – Mètodes d’Arrays en JavaScript</h1>
+
+    <p><strong>Array actual:</strong></p>
+    <pre id="arrayActual"></pre>
+
+    <p><strong>Resultat:</strong></p>
+    <pre id="resultat"></pre>
+
+    <h2>Operacions</h2>
+
+    <button onclick="mostrarToString()">toString()</button>
+    <button onclick="mostrarJoin()">join()</button>
+    <button onclick="ferPop()">pop()</button>
+    <button onclick="ferPush()">push()</button>
+    <button onclick="ferShift()">shift()</button>
+    <button onclick="ferUnshift()">unshift()</button>
+    <button onclick="ferConcat()">concat()</button>
+    <button onclick="ferEvery()">every()</button>
+    <button onclick="ferFilter()">filter()</button>
+    <button onclick="ferMap()">map()</button>
+    <button onclick="ferReduce()">reduce()</button>
+    <button onclick="ferSome()">some()</button>
+    <button onclick="ferSort()">sort()</button>
+    <button onclick="ferSlice()">slice()</button>
+    <button onclick="ferSplice()">splice()</button>
+
+    <script>
+        // Array base
+        let array = [1, 2, 3, 4, 5];
+
+        function mostrarArray() {
+            document.getElementById("arrayActual").textContent =
+                JSON.stringify(array);
+        }
+
+        function mostrarResultat(text) {
+            document.getElementById("resultat").textContent = text;
+            mostrarArray();
+        }
+
+        // Inicial
+        mostrarArray();
+
+        // toString
+        function mostrarToString() {
+            mostrarResultat(array.toString());
+        }
+
+        // join
+        function mostrarJoin() {
+            mostrarResultat(array.join(" - "));
+        }
+
+        // pop
+        function ferPop() {
+            let valor = array.pop();
+            mostrarResultat("pop() → eliminat: " + valor);
+        }
+
+        // push
+        function ferPush() {
+            array.push(6);
+            mostrarResultat("push(6)");
+        }
+
+        // shift
+        function ferShift() {
+            let valor = array.shift();
+            mostrarResultat("shift() → eliminat: " + valor);
+        }
+
+        // unshift
+        function ferUnshift() {
+            array.unshift(0);
+            mostrarResultat("unshift(0)");
+        }
+
+        // concat
+        function ferConcat() {
+            let nouArray = array.concat([7, 8, 9]);
+            mostrarResultat("concat([7,8,9]) → " + JSON.stringify(nouArray));
+        }
+
+        // every
+        function ferEvery() {
+            let resultat = array.every(num => num >= 0);
+            mostrarResultat("every(num >= 0) → " + resultat);
+        }
+
+        // filter
+        function ferFilter() {
+            let resultat = array.filter(num => num > 2);
+            mostrarResultat("filter(num > 2) → " + JSON.stringify(resultat));
+        }
+
+        // map
+        function ferMap() {
+            let resultat = array.map(num => num * 2);
+            mostrarResultat("map(num * 2) → " + JSON.stringify(resultat));
+        }
+
+        // reduce
+        function ferReduce() {
+            let suma = array.reduce((acc, num) => acc + num, 0);
+            mostrarResultat("reduce (suma) → " + suma);
+        }
+
+        // some
+        function ferSome() {
+            let resultat = array.some(num => num > 4);
+            mostrarResultat("some(num > 4) → " + resultat);
+        }
+
+        // sort
+        function ferSort() {
+            array.sort((a, b) => b - a);
+            mostrarResultat("sort descendent");
+        }
+
+        // slice
+        function ferSlice() {
+            let resultat = array.slice(1, 4);
+            mostrarResultat("slice(1,4) → " + JSON.stringify(resultat));
+        }
+
+        // splice
+        function ferSplice() {
+            let eliminats = array.splice(2, 2, 99, 100);
+            mostrarResultat(
+                "splice(2,2,99,100) → eliminats: " + JSON.stringify(eliminats)
+            );
+        }
+    </script>
+
+</body>
+</html>
