@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problema 09 - Nota Final Estudiant</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .info {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            display: block;
+            margin: 20px auto;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #resultat {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #e8f5e9;
+            border-left: 4px solid #4CAF50;
+            border-radius: 5px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Càlcul de Nota Final</h1>
+        
+        <div class="info">
+            <h2>Informació de l'Estudiant</h2>
+            <p><strong>Nom:</strong> <span id="nom"></span></p>
+            <p><strong>Assignatures:</strong> <span id="assignatures"></span></p>
+            <p><strong>Notes:</strong> <span id="notes"></span></p>
+        </div>
+
+        <button onclick="mostrarResultat()">Calcular Nota Final</button>
+
+        <div id="resultat"></div>
+    </div>
+
+    <script src="problema09.js"></script>
+    <script>
+        // Mostrar informació inicial
+        document.getElementById('nom').textContent = estudiant.nom;
+        document.getElementById('assignatures').textContent = estudiant.assignatures.join(', ');
+        document.getElementById('notes').textContent = estudiant.notes.join(', ');
+
+        // Funció per mostrar el resultat
+        function mostrarResultat() {
+            calculaNotaFinal(estudiant);
+            const resultatDiv = document.getElementById('resultat');
+            resultatDiv.innerHTML = `<strong>Nota Final:</strong> ${estudiant.notaFinal.toFixed(2)}`;
+            resultatDiv.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
